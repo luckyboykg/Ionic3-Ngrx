@@ -1,0 +1,7 @@
+{
+  "name": "ngRxAndIonic",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

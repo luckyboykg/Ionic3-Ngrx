@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Address Books
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="container"
+  padding>
+
+  <button ion-button
+    color="secondary"
+    (click)="add()">Add new</button>
+
+  <ion-searchbar [showCancelButton]="isShowCancel"
+    placeholder="Filter Items"
+    #searchInput
+    (ionInput)="onInput(searchInput.value)"
+    (ionCancel)="onCancel($event)">
+  </ion-searchbar>
+
+  <ion-spinner class="test_loading"
+    *ngIf="loading | async"></ion-spinner>
+  <ion-list>
+    <ion-item class="test_addressBookItem"
+      *ngFor="let addressBook of addressBooks | async">
+      {{addressBook.name}}{{runChangeDetection}}
+      <button ion-button
+        outline
+        item-end
+        (click)="goToAddressBookDetail(addressBook)"
+        color="secondary">View</button>
+      <button ion-button
+        outline
+        item-end
+        (click)="edit(addressBook)"
+        color="primary">Edit</button>
+    </ion-item>
+  </ion-list>
+</ion-content>
