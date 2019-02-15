@@ -1,50 +1,54 @@
 # ngRxIonic
-This project is an example to apply ngRx-Store in Ionic.
+This project is an example to apply NGRX in Ionic.
 
 Dependencies :
 Ionic 3, ngrx/effects: 5.2.0, @ngrx/store: 5.2.0, jasmine : 2.99.0, karma : 1.7.1, typescript : 2.6.2
 
-ngRx-Store pattern :
+NGRX pattern :
+
 ![alt text](https://www.codemag.com/Article/Image/1811061/image4.PNG)
 
-**Pros :**
+### Pros:
 
 **-Centralized, Immutable State**
->All relevant application state exists in one location. 
->This makes it easier to track down problems, as a snapshot of state at the time of an error can provide important insight and make it easy to recreate issues.
 
-It's mean : 
+Single source of truth: The data lives in a single store so it is easier to manage, debug and inspect.
 
-+We can manage all the changes in our system. We don't let the component change the State directly, they have to dispatch Action to Reducer.
+**-Immutable State**
 
-+We can share the State across many components and it's help us very easy to maintain the State.
+State is read-only: All components have to dispatch Action to get or set any data from the Store.
+So we can manage all the changes in our system and avoid the side effect. 
+
+**-Share State**
+
+State can share across many components. 
+We can minimize the risk of sharing variables, services between multiple components.
+
+**-Components will shorter and cleaner**
+
+Component just need to binding data from the State.
+It helps us very easy to maintain Component and Service.
 
 **-Performance**
->Since state is centralized at the top of your application, data updates can flow down through your components relying on slices of store. 
->Angular 2 is built to optimize on such a data-flow arrangement, and can disable change detection in cases where components rely on Observables which have not emitted new values. 
 
-It's mean : 
+NGRX doesn't change the State directly, it just returns the new State when has anything changed (it's called Immutable State).
 
-+NgRxStore doesn't change the State directly, they just return the new State when have anything changed (Immutable State)
+So we can apply ChangeDetectionStrategy.OnPush to maximize performance for Angular App.
 
-+So we can leverage on this technique to apply ChangeDetectionStrategy.OnPush to make Angular doesn't run some change detection triggers when not need.
-
-+Read more : https://netbasal.com/a-comprehensive-guide-to-angular-onpush-change-detection-strategy-5bac493074a4
+>Read more about ChangeDetectionStrategy.OnPush : https://netbasal.com/a-comprehensive-guide-to-angular-onpush-change-detection-strategy-5bac493074a4
 
 **-Testability**
->All state updates are handled in reducers, which are pure functions. 
->Pure functions are extremely simple to test, as it is simply input in, assert against output. 
 
-**Cons :**
+All state updates are handled by pure functions and they are extremely simple to test. 
 
--Developer have to spend more time and effort to learn new technology as Redux pattern, ngRx-Store library, Rxjs
+>Read more about Pure Functions: https://medium.com/@jamesjefferyuk/javascript-what-are-pure-functions-4d4d5392d49c
 
--Make simple app to not simple (but not complex)y
+### Cons:
+
+Not officially supported by Angular or Ionic.
+Developer has to spend more time and effort to learn new technology as Redux pattern, NGRX library
 
 ### My Conclusion:
 
--Should use ngRx-Store for every angular app with more than 5 screens and we intend to upgrade it later. Because ngRx-Store help us easy to maintain the complex application.
-
--It's help us minimize the risk of sharing variables, services between multiple components. 
-
--It's help us maximize the performance for Angular App in our case is Ionic App.
+Should use NGRX for every angular app with more than 5 screens and we intend to upgrade it later. 
+Because NGRX help us easy to go for the complex application.
