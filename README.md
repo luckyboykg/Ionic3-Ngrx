@@ -12,21 +12,28 @@ NGRX pattern :
 
 **-Centralized, Immutable State**
 
-Single source of truth: The data lives in a single store so it is easier to manage, debug and inspect.
+Single source of truth.
+
+The data lives in a single store so it is easier to manage, debug and inspect.
 
 **-Immutable State**
 
-State is read-only: All components have to dispatch Action to get or set any data from the Store.
+State is read-only.
+
+All components have to dispatch Action to get or set any data from the Store.
+
 So we can manage all the changes in our system and avoid the side effect. 
 
 **-Share State**
 
-State can share across many components. 
+State can share across many components.
+
 We can minimize the risk of sharing variables, services between multiple components.
 
 **-Components will shorter and cleaner**
 
 Component just need to binding data from the State.
+
 It helps us very easy to maintain Component and Service.
 
 **-Performance**
@@ -46,9 +53,11 @@ All state updates are handled by pure functions and they are extremely simple to
 ### Cons:
 
 Not officially supported by Angular or Ionic.
+
 Developer has to spend more time and effort to learn new technology as Redux pattern, NGRX library
 
 ### My Conclusion:
 
 Should use NGRX for every angular app with more than 5 screens and we intend to upgrade it later. 
+
 Because NGRX help us easy to go for the complex application.
