@@ -36,7 +36,7 @@ It helps us very easy to maintain Component and Service.
 
 ## Performance
 
-NGXS doesn't change the State directly, it just returns the new State when has anything changed (it's called Immutable State).
+NgRx doesn't change the State directly, it just returns the new State when has anything changed (it's called Immutable State).
 
 So we can apply ChangeDetectionStrategy.OnPush to maximize performance for Angular App.
 
