@@ -1,5 +1,5 @@
 # Ionic3 Ngrx
-This project is an example to apply NGRX in Ionic.
+This project is an example to apply NgRx in Ionic 3.
 
 Dependencies :
 
