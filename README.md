@@ -52,12 +52,10 @@ All state updates are handled by pure functions and they are extremely simple to
 
 ### Cons:
 
-Not officially supported by Angular or Ionic.
+-Not officially supported by Angular or Ionic.
 
-Developer has to spend more time and effort to learn new technology as Redux pattern, NGRX library
+-Developer has to spend more time and effort to learn new technology as Redux pattern, NgRx or NGXS library.
 
-### My Conclusion:
+-“BOILERPLATE” code, we need to writing more code and touch multiple files to get a simple feature working.
 
-Should use NGRX for every angular app with more than 5 screens and we intend to upgrade it later. 
-
-Because NGRX help us easy to go for the complex application.
+-Not suitable for small applications with less than 5 screens.
