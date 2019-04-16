@@ -2,6 +2,7 @@
 This project is an example to apply NGRX in Ionic.
 
 Dependencies :
+
 Ionic 3, ngrx/effects: 5.2.0, @ngrx/store: 5.2.0, jasmine : 2.99.0, karma : 1.7.1, typescript : 2.6.2
 
 NGRX pattern :
@@ -27,11 +28,13 @@ So we can manage all the changes in our system and avoid the side effect.
 ## Share State
 
 State can share across many components. 
+
 We can minimize the risk of sharing variables, services between multiple components.
 
 ## Components will shorter and cleaner
 
 Component just need to binding data from the State.
+
 It helps us very easy to maintain Component and Service.
 
 ## Performance
