@@ -80,7 +80,7 @@ Store creates a new state and notifies an update to the View.
 Flux and Redux don’t encourage bi-directional flow to ensure clean data flow architecture. The significant benefit of a unidirectional approach is that since the data flows through your application in a single direction you can have better control over it.
 
 ## NGRX library
-(follows the unidirectional flow)
+-Implement Redux Architecture
 
 ![alt text](https://lh6.googleusercontent.com/c0NfQ3-FuyhRCviYqXuoD_5-FXuVulrNUIZ_JvLk48CjXXwkBdJtuOMdkgpqzQE8ToMSCkE9JG8ZKfPOSkmDkxENLWx5h4CKe_RZQaLQ513InI5LONPpaowuLum8zleDFDJ0OkjZM80)
 
