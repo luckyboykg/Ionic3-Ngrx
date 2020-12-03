@@ -14,6 +14,10 @@ Ionic 3, ngrx/effects: 5.2.0, @ngrx/store: 5.2.0, jasmine : 2.99.0, karma : 1.7.
 
 -Controller handles entire logic.
 
+-Debugging is difficult due to bidirectional flow.
+
+-Shines well in both client-side or server-side frameworks.
+
 ![alt text](https://www.tutorialsteacher.com/Content/images/mvc/mvc-architecture.png)
 
 MVC is well-known for its three-layer development architecture and it divides applications into three components:
@@ -33,6 +37,10 @@ Whenever the controller receives the request from the user, it uses the appropri
 -Includes multiple stores.
 
 -Store handles all logic.
+
+-Ensures simple debugging with the dispatcher.
+
+-Supports client-side framework.
 
 ![alt text](https://lh6.googleusercontent.com/Dm5Ge_yI8JFDBrTd__NLI-UirqyNMVcJTWGno7kQXbwcP9qLMOyKMDPp0uoQIRoADRrKMomOFBNxdiQg26YVXSfYzKlSj9mc0R532ImyU7M23MgKa1lJUS2hEP9PxmcHrb-OPqjjVHA)
 
@@ -62,6 +70,10 @@ The Store updates the state based on the payload and notifies an update to the V
 
 -Reducer handles all logic.
 
+-Single store makes debugging lot easier.
+
+-Supports client-side framework.
+
 ![alt text](https://lh4.googleusercontent.com/8x2u1K_k8yuhW0YEaKJTSeN18M35ilAG5wKKnP91cS6TI9d6vhhd-gCqdoQr0HL5IGTO1JD6JWGlHJp8LoIAdp3xL5CS70YTH5RgRWp94_FlnhQKfTutQVthyxCRuKrRWzNHYljKESg)
 
 Redux is a library, which implements the idea of Flux but in quite a different way. 
@@ -78,6 +90,9 @@ Store creates a new state and notifies an update to the View.
 
 
 Flux and Redux don’t encourage bi-directional flow to ensure clean data flow architecture. The significant benefit of a unidirectional approach is that since the data flows through your application in a single direction you can have better control over it.
+
+Reference:
+https://www.clariontech.com/blog/mvc-vs-flux-vs-redux-the-real-differences
 
 ## NGRX library
 -Implement Redux Architecture
