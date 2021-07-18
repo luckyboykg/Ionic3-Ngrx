@@ -10,9 +10,9 @@ Ionic 3, ngrx/effects: 5.2.0, @ngrx/store: 5.2.0, jasmine : 2.99.0, karma : 1.7.
 
 -Follows the bidirectional flow.
 
--No concept of store.
+-No concept of the store.
 
--Controller handles entire logic.
+-Controller handles the entire logic.
 
 -Debugging is difficult due to bidirectional flow.
 
@@ -24,7 +24,7 @@ MVC is well-known for its three-layer development architecture and it divides ap
 
 Model: maintains the data and behavior of an application
 
-View: displays the model in the UI
+View: displays the model on the UI
 
 Controller: handles the user request and serves as an interface between View & Model components
 
@@ -56,7 +56,7 @@ View: same as the view in MVC architecture
 
 
 When a user clicks on something, the view creates Actions. 
-Action can create new data (or mofidy existing data) and send it to the Dispatcher. 
+Action can create new data (or modify existing data) and send it to the Dispatcher. 
 
 The Dispatcher then dispatches the action with payload to the appropriate Store. 
 The Store updates the state based on the payload and notifies an update to the View.
@@ -70,7 +70,7 @@ The Store updates the state based on the payload and notifies an update to the V
 
 -Reducer handles all logic.
 
--Single store makes debugging lot easier.
+-Single store makes debugging a lot easier.
 
 -Supports client-side framework.
 
@@ -84,7 +84,7 @@ Reducer: Logic that decides how your data changes in pure functions
 
 Centralized Store: Holds a state object which is the state of the entire app
 
-In Redux architecture, application event is denoted as an Action, which is dispatched to the Reducer (the pure function).
+In Redux architecture, the application event is denoted as an Action, which is dispatched to the Reducer (the pure function).
 Then the Reducer updates the Centralized Store with new data based on the kind of Action it receives.
 Store creates a new state and notifies an update to the View.
 
@@ -124,15 +124,15 @@ So we can manage all the changes in our system and avoid the side effect.
 
 ## Share State
 
-State can share across many components. 
+The State can share across many components. 
 
 We can minimize the risk of sharing variables, services between multiple components.
 
-## Components will shorter and cleaner
+## Components will be shorter and cleaner
 
-Component just need to binding data from the State.
+Component just needs to binding data from the State.
 
-It helps us very easy to maintain Component and Service.
+It helps us very easily to maintain Component and Service.
 
 ## Performance
 
